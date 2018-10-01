@@ -106,7 +106,7 @@ var point2 = {
 ## Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="graphs/contributors"><img src="https://opencollective.com/turf/contributors.svg?width=890&button=false" /></a>
+<a href="/graphs/contributors"><img src="https://opencollective.com/turf/contributors.svg?width=890&button=false" /></a>
 
 
 ## Backers
