@@ -95,9 +95,7 @@ function nearestNeighborAnalysis(dataset: FeatureCollection<any>, options?: {
         const otherFeatures = featureCollection<Point>(features.filter((f, i) => {
             return i !== index;
         }));
-        // Have to add the ! to make typescript validation pass
-        // see https://stackoverflow.com/a/40350534/1979085
-        return distance(feature, nearestPoint(feature, otherFeatures).geometry!.coordinates, {units});
+        return distance(feature, nearestPoint(feature, otherFeatures), {units});
     }).reduce((sum, value) => { return sum + value; }, 0) / n;
 
     const populationDensity = n / convertArea(area(studyArea), 'meters', units);

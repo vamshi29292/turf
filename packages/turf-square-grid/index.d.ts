@@ -1,4 +1,4 @@
-import { FeatureCollection, Polygon, BBox, Units, Feature, MultiPolygon, Properties } from "@turf/helpers";
+import { BBox, Feature, FeatureCollection, MultiPolygon, Polygon, Properties, Units } from "@turf/helpers";
 /**
  * Creates a square grid from a bounding box, {@link Feature} or {@link FeatureCollection}.
  *
@@ -22,8 +22,9 @@ import { FeatureCollection, Polygon, BBox, Units, Feature, MultiPolygon, Propert
  * //addToMap
  * var addToMap = [squareGrid]
  */
-export default function squareGrid<P = Properties>(bbox: BBox, cellSide: number, options?: {
+declare function squareGrid<P = Properties>(bbox: BBox, cellSide: number, options?: {
     units?: Units;
     properties?: P;
     mask?: Feature<Polygon | MultiPolygon> | Polygon | MultiPolygon;
 }): FeatureCollection<Polygon, P>;
+export default squareGrid;
